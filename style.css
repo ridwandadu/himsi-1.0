@@ -1,0 +1,1230 @@
+@font-face {
+    font-family: fcb-bold;
+    src: url('/font/FC_BARCELONA-Bold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: fcb-extra-bold;
+    src: url('/font/FC_BARCELONA-Extrabold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: fcb-light;
+    src: url('/font/FC_BARCELONA-Light.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: fcb-semi-bold;
+    src: url('/font/FC_BARCELONA-Semibold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: fcb-regular;
+    src: url('/font/FC_BARCELONA-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    font-family: fcb-regular;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+.navbar{
+    width: 100%;
+    height: 12rem;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(24,23,51);
+    border-bottom: 0.8rem solid transparent;
+    border-image-source: linear-gradient(90deg,#154284 0,#cd122d);
+    border-image-slice: 1;
+    z-index: 100;
+}
+
+.logo{
+    width: 22.5%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-right: 0.1rem solid rgb(82, 81, 81);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.logo::after{
+    content: "";
+    width: 2rem;
+    height: 3rem;
+    position: absolute;
+    top: -5rem;
+    right: 0;
+    background-color: #cd122d;
+    transition: top 0.3s;
+}
+
+.logo::before{
+    content: "";
+    width: 2rem;
+    height: 3rem;
+    position: absolute;
+    bottom: -5rem;
+    left: 0;
+    background-color: #154284;
+    transition: bottom 0.3s;
+}
+
+.logo:hover{
+    background-color: rgb(36, 35, 62);
+    transition: backgorund-color 1s;
+}
+
+.logo:hover::after{
+    top: 0;
+    transition: top 0.3s;
+}
+
+.logo:hover::before{
+    bottom: 0;
+    visibility: visible;
+    transition: bottom 0.3s;
+}
+
+.logo-img{
+    width: 10rem;
+    opacity: 0.9;
+}
+
+.logo-title{
+    width: auto;
+    font-family: fcb-bold;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.navbar-menu{
+    width: 78%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-contact{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0a0927;
+}
+
+.sosmed{
+    width: 35%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    color: rgb(183, 180, 180);
+}
+
+.follow{
+    font-family: fcb-bold;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.sosmed a{
+    font-size: 1.8rem;
+    color: rgb(146, 143, 143);
+}
+
+.sosmed a:hover{
+    color: #fff;
+}
+
+.navbar-access{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #fff;
+}
+
+.login{
+    width: 10rem;
+}
+
+.login-link{
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: fcb-extra-bold;
+    font-size: 1.5rem;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.login-link:hover{
+    text-decoration: underline solid #fff;
+}
+
+.register{
+    width: 15rem;
+    height: 3.6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: fcb-extra-bold;
+    font-size: 1.3rem;
+    color: #fff;
+    background: linear-gradient(90deg,#8c1a17,#cd122d);
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.icon{
+    margin-right: 0.5rem;
+    width: 1.8rem;
+    fill: #fff;
+}
+
+.navbar-link{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: fcb-extra-bold;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.navbar-link a{
+    color: #fff;
+}
+
+.link{
+    width: 25%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 0.1rem solid rgb(82, 81, 81);  
+    cursor: pointer;  
+    transition: color 0.5s;
+}
+.link:first-child:hover ~ li{
+    color: rgb(147, 147, 147);
+    transition: color 0.5s;
+}
+
+.link:nth-child(2):hover ~ li{
+    color: rgb(147, 147, 147);
+    transition: color 0.5s;
+}
+
+.link:nth-child(3):hover ~ li{
+    color: rgb(147, 147, 147);
+    transition: color 0.5s;
+}
+
+.link:nth-child(4):hover ~ li{
+    color: rgb(147, 147, 147);
+    transition: color 0.5s;
+}    
+.grup{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    background-color: #154284;
+    transform: scale(0);
+    transform-origin: top center;
+}    
+
+.grup::before{
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    display: inline-block;
+    bottom: 100%;
+    border: 0.8rem solid #154284;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+
+.tentang-kami{
+    padding: 2rem;
+    width: 18rem;
+    height: 18rem;
+    position: absolute;
+    bottom: -17rem;
+}
+
+.publikasi{
+    padding-top: 1.5rem;
+    width: 15rem;
+    height: 15rem;
+    position: absolute;
+    bottom: -14rem;
+}
+
+.grup-link{
+    font-family: fcb-bold;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    transform: translateY(-2rem);
+}    
+
+.grup-link a{
+    font-family: inherit;
+    color: inherit;
+}
+
+.grup-link:hover{
+    text-decoration: underline solid #fff;
+}
+
+.tentang-kami .grup-link{
+    width: 15rem;
+    height: 3rem;
+}
+
+.publikasi .grup-link{
+    width: 10rem;
+    height: 3rem;
+}
+
+.link:hover .grup{
+    transform: scale(1);
+    transition: transform 0.19s ease-in;
+}
+
+.link:hover .grup-link{
+    transform: translateY(0);
+    transition: transform 0.7s;
+}
+
+/* END OF NAVBAR STYLE */
+
+.container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:#181733;
+    overflow: hidden;
+}
+
+/* SECTION 0 */
+.section-0{
+    padding: 20% 10% 0;
+    width: 100%;
+    height: 110vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    background-color: #fff;
+}
+
+.section-0 .welcome{
+    width: 70%;
+    color: #034078;
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome p{
+    width: 70%;
+    font-family: fcb-semi-bold;
+    font-size: 1.5rem;
+}
+.welcome h1{
+    font-family: fcb-bold;
+    font-size: 7rem;
+    text-shadow: 2px 3px 10px #66666b;
+}
+
+.welcome-img{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.welcome-img img{
+    position: relative;
+    top: -5rem;
+    width: 180%;
+}
+
+.section-0::after{
+    content: url(/assests/vector.png);
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: -13rem;
+    left: 0;
+    z-index: 0;
+    overflow: hidden;
+}
+
+/* SECTION 1 */
+
+.section-1{
+    margin-top: 6rem;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    width: 97.5%;
+    height: 120vh;
+    background-color: #fff;
+    border-radius: 1.5rem 1.5rem 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 2;
+}
+
+.visi, .misi{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.visi-content, .misi-content{
+    padding-left: 2rem;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    border-radius: 4rem;
+    border: 1px solid black;
+    transition: all ease 0.5s;
+}
+
+.visi-content:hover, .misi-content:hover{
+    box-shadow: 1px 1px 2rem black;
+}
+
+.visi-content h1, .misi-content h1{
+    font-family: fcb-bold;
+    font-size: 6rem;
+}
+
+.visi-content h1{
+    color: #af1c2e;
+}
+
+.misi-content h1{
+    color: #006172;
+}
+
+.visi img{
+    width: 200px;
+}
+
+.visi-content p, .misi-content li{
+    width: 100%;
+    font-family: fcb-semi-bold;
+    font-size: 1.5rem;
+}
+
+.misi img{
+    width: 380px;
+}
+
+/* END OF SECTION 1 */
+
+.section-2{
+    padding: 3rem 4rem 2rem;
+    width: 97.5%;
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+
+.events-h1{
+    font-family: fcb-bold;
+    font-size: 6rem;
+    color: #034078;
+}
+
+.section-2::after{
+    content: "";
+    position: relative;
+    top: -45rem;
+    left: 0;
+    width: 100%;
+    height: 0.5rem;
+    display: inline-block;
+    border-radius: 1rem;
+    background-image: linear-gradient(90deg,#154284 0,#cd122d);
+}
+
+.section-2-img{
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 4rem;
+}
+
+.image{
+    padding-bottom: 2rem;
+    width: calc(100%/3);
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    color: #fff;
+    text-align: center;
+    transform: scale(1);
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.image::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-image: linear-gradient(360deg, rgb(0, 0, 0) 20%, transparent);
+}
+
+.sertijab{
+    background-image: url(assests/sertijab.JPG);
+    background-size: cover;
+    transform-origin: center;
+}
+
+.p2md{
+    background-image: url(assests/p2md.JPG);
+    background-size: cover;
+    transform-origin: right;
+}
+
+.berbagi{
+    background-image: url(assests/berbagi.jpg);
+    background-size: cover;
+    transform-origin: right;
+}
+
+/* transition background */
+
+.sertijab:hover{
+    width: 50%;
+    transform: scale(1.1);
+    transition: all 0.2s;
+}
+
+.p2md:hover{
+    width: 51%;
+    transform: scale(1.1);
+    transition: all 0.2s;
+}
+
+.berbagi:hover{
+    width: 50%;
+    transform: scale(1.1);
+    transition: all 0.2s;
+}
+
+/* End transition background */
+
+.text{
+    z-index: 2;
+}
+
+.heading-img{
+    font-family: fcb-extra-bold;
+    font-size: 1.8rem;
+    transition: all 0.2s;
+}
+
+.image:hover .heading-img{
+    transform: translateY(-10rem);
+    transition: all 0.2s;
+}
+
+.desc-img{
+    padding: 0 5rem;
+    width: 100%;
+    position: absolute;
+    bottom: -1rem;
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+    visibility: hidden;
+}
+
+.image:hover .desc-img{
+    bottom: 10rem;
+    visibility: visible;
+    transition: all 0.2s 0.07s;
+}
+
+.metadata-img{
+    padding: 0 30%;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: all 0.2s;
+}
+
+.image:hover .metadata-img{
+    transform: translateY(-5rem);
+    transition: all 0.3s;
+}
+
+.feature{
+    position: relative;
+    font-family: fcb-bold;
+    font-size: 1.2rem;
+    color: #fdc52c;
+}
+
+.feature::before{
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    top: 0.3rem;
+    left: -1.5rem;
+    background-color: #fdc52c;
+}
+
+.time{
+    width: 6.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+.matches{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.widget-header{
+    padding: 6rem 0;
+    width: 100%;
+    height: 9rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.widget-title{
+    width: 35.3%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.widget-title-1{
+    font-family: fcb-extra-bold;
+    font-size: 3.7rem;
+    background: -webkit-linear-gradient(360deg , #cd122d ,#181733);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.widget-title-2{
+    font-family: fcb-light;
+    font-size: 3.7rem;
+    background: -webkit-linear-gradient(360deg ,#181733, #393873);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.widget-countdown{
+    width: 59%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.countdown-title{
+    font-family: fcb-extra-bold;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+.countdown{
+    top: -0.3rem;
+    width: 38%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.countdown-separator{
+    padding-bottom: 1.5rem;
+    font-size: 4rem;
+}
+
+.countdown-partisi{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.countdown-value{
+    height: 4.5rem;
+    display: flex;
+    align-items: center;
+    font-family: fcb-extra-bold;
+    font-size: 4.5rem;
+}
+
+.days{
+    color: #cd122d;
+}
+
+.hours{
+    background: -webkit-linear-gradient(360deg , #cd122d ,#181733);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.mins{
+    background: -webkit-linear-gradient(360deg ,#181733 ,#154284);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.secs{
+    color: #154284;
+}
+
+.countdown-label{
+    font-family: fcb-bold;
+    font-size: 1rem;
+    color: #59595b;
+}
+
+.widget-sync{
+    height: max-content;
+    position: relative;
+    left: -1rem;
+    cursor: pointer;
+}
+
+.widget-sync i{
+    font-size: 1.2rem;
+    color: #184284;
+}
+
+.sync{
+    margin-left: 0.3rem;
+    font-family: fcb-extra-bold;
+    font-style: italic;
+    color: #184284;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.widget-sync:hover .sync{
+    text-decoration: underline;
+}
+
+.widget-scroll{
+    width: 9rem;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.scroll-btn{
+    padding-top: 0.35rem;
+    width: 4rem;
+    height: 4rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    background-color: #f8f8f8;
+    border: 0.1rem solid #8f8f91;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.scroll-btn::after{
+    content: "";
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #154284;
+    border-radius: 50%;
+    transform: scale(0);
+    transform-origin: center;
+    transition: transform 0.2s;
+}
+
+.scroll-btn:hover::after{
+    transform: scale(1);
+    transform-origin: center;
+    transition: transform 0.2s;
+}
+
+.scroll-btn i{
+    z-index: 2;
+}
+
+.scroll-btn:hover i{
+    color: #fff;
+}
+
+/* END OF WIDGET HEADER
+
+
+.history-matches-container{
+    padding-left: 4rem;
+    width: 107%;
+    height: 33rem;
+    position: relative;
+    overflow: scroll;
+}
+
+.box-match-container{
+    width: 200%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-match{
+    margin-right: 1rem;
+    width: 25%;
+    height: 93%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 0.05rem solid #e0e0e2;
+    cursor: pointer;
+    box-shadow: none;
+    transition: box-shadow 0.5s;
+}
+
+.box-match:hover{
+    box-shadow: 0.2rem 0.2rem 1rem rgb(155, 153, 153);
+    transition: box-shadow 0.2s;
+}
+
+.match-date{
+    padding-left: 1.5rem;
+    width: 100%;
+    height: 5.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #154284;
+}
+
+.match-date-num{
+    padding-right: 1rem;
+    padding-bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: fcb-extra-bold;
+    font-size: 5rem;
+    color: #fff;
+    line-height: 4.8rem;
+}
+
+.day-month{
+    width: max-content;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.match-day{
+    font-family: fcb-extra-bold;
+}
+
+.match-day, .match-month{
+    line-height: 2rem;
+}
+
+.match-content{
+    padding-top: 1.5rem;
+    width: 100%;
+    height: 17rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-tournament{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.league-logo {
+    width: 9rem;
+    height: 100%;
+}
+
+.match-team{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo-team img, .logo-team svg{
+    width: 5rem;
+    height: 5rem;
+}
+
+.score{
+    width: 8rem;
+    height: 4.5rem;
+    position: relative;
+    font-family: fcb-extra-bold;
+    font-size: 3rem;
+    color: #fff;
+    text-align: center;
+    line-height: 4rem;
+    background: linear-gradient(to bottom, #154284 , black 80%);
+}
+
+.score::after{
+    content: "90' + 6";
+    position: absolute;
+    top: -3.5rem;
+    left: 2.5rem;
+    font-family: fcb-regular;
+    font-size: 1rem;
+    color: rgb(154, 154, 154);
+}
+
+.name-team{
+    width: 70%;
+    position: relative;
+    top: -2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 2rem;
+}
+
+.name-team::after{
+    content: "Spotify Camp Nou";
+    position: absolute;
+    top: 3rem;
+    font-family: fcb-regular;
+    font-size: 1.2rem;
+    color: rgb(154, 154, 154);
+}
+
+.name-team::before{
+    content: "V";
+    position: absolute;
+    top: 0.9rem;
+    left: 9.6rem;
+    font-family: fcb-regular;
+    font-size: 1.2rem;
+    color: rgb(154, 154, 154);
+}
+
+
+.name-team h4{
+    font-family: fcb-extra-bold;
+}
+
+.match-vid-btn{
+    width: 100%;
+    height: 8rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top: 0.1rem solid #e0e0e2;
+}
+
+.match-vid-btn button{
+    width: 45%;
+    height: 3.5rem;
+    font-family: fcb-extra-bold;
+    font-size: 1.2rem;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 0.3rem;
+}
+
+.match-vid-btn button:hover{
+    background: linear-gradient(90deg, red, #154284);
+    transition: background 0.5s;
+}
+
+.barca-tv-vid-btn{
+    border: 0.2rem solid transparent;
+    border-image-source: linear-gradient(90deg, red, #154284);
+    border-image-slice: 1;
+    background: #0a0927;
+}
+
+.full-match-btn{
+    border: none;
+    background-color: #154284;
+}
+
+.result{
+    position: relative;
+    background: url(/assests/fixture-scroller-bg.jpg) center / cover;
+}
+
+.result::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(230deg,rgba(24,23,53,.9),rgba(154,0,11,.9));
+    opacity: 0.97;
+}
+
+.result-text-1{
+    font-family: fcb-light;
+    font-size: 3rem;
+    font-weight: 500;
+    color: #fff;
+    z-index: 2;
+}
+
+.result-text-2{
+    font-family: fcb-bold;
+    font-size: 3rem;
+    color: #fff;
+    z-index: 2;
+}
+
+
+**/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
